@@ -1,0 +1,7 @@
+{
+  "name": "calculadoraSueldo",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

@@ -1,0 +1,73 @@
+<ion-app>
+<ion-header [translucent]="true">
+  <ion-toolbar Color="primary">
+    <ion-title>
+      Calculadora Sueldo
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+      <form onsubmit="processForm(event)">
+        <ion-list class="">
+
+          <ion-item>
+            <ion-input placeholder="Ingresá tu sueldo bruto*" required type="number" oninput="BrutoNumberValue(event)"></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Hijos</ion-label>
+            <ion-select value="Hijos" interface="action-sheet">
+              <ion-select-option value="0">0</ion-select-option>
+              <ion-select-option value="1">1</ion-select-option>
+              <ion-select-option value="2">2</ion-select-option>
+              <ion-select-option value="3">3</ion-select-option>
+            </ion-select>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>¿Tenés cónyuge a cargo?</ion-label>
+            <ion-toggle [(ngModel)]="conyugue"></ion-toggle>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>¿Sos jubilado?</ion-label>
+            <ion-toggle [(ngModel)]="jubilado"></ion-toggle>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>¿Vivís en zona patagónica?</ion-label>
+            <ion-toggle [(ngModel)]="patagonica"></ion-toggle>
+          </ion-item>
+
+
+          <ion-item>
+            <ion-label position="stacked">Ingresá tu gasto de alquiler</ion-label>
+            <ion-input required type="number" oninput="AlquilerNumberValue(event)"></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label position="stacked">Ingresá tu gasto de crédito hipotecario</ion-label>
+            <ion-input required type="number" oninput="CreditoNumberValue(event)"></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label position="stacked">Ingresá tu gasto de empleada doméstica</ion-label>
+            <ion-input required type="number" oninput="EmpleadaNumberValue(event)"></ion-input>
+          </ion-item>
+
+        </ion-list>
+
+        <div class="ion-padding">
+          <ion-button expand="block" type="submit" class="ion-no-margin">CALCULAR</ion-button>
+        </div>
+      </form>
+
+  </ion-content>
+
+  <ion-footer>
+    <ion-toolbar>
+      <p align="center">chavales 2020</p>
+    </ion-toolbar>
+  </ion-footer>
+</ion-app>
